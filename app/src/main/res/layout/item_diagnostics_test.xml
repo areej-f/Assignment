@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cardTests"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true"
+    android:clickable="false"
+    app:cardBackgroundColor="@color/grey"
+    android:layout_margin="8dp">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/llCompact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/imgIcon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:src="@drawable/ic_launcher_background"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txtTest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Camera Test"
+                android:textStyle="bold"
+                android:textColor="@color/dark_blue" />
+            <TextView
+                android:id="@+id/txtDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Were you able to \n click pics? "/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llTestResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:visibility="visible"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/iconRetry"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/retry"/>
+            <TextView
+                android:id="@+id/txtRetry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Retry"/>
+        </LinearLayout>
+
+    </LinearLayout>
+       <LinearLayout
+           android:id="@+id/llExpanded"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:padding="20dp"
+           android:orientation="horizontal"
+           android:visibility="gone">
+           <ImageView
+               android:layout_width="20dp"
+               android:layout_height="20dp"
+               android:layout_marginLeft="25dp"
+               android:layout_gravity="center_horizontal|center_vertical"
+               android:src="@drawable/ic_launcher_background"/>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:padding="20dp">
+               <Button
+                   android:id="@+id/btnStart"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="right"
+                   android:textColor="@color/white"
+                   android:backgroundTint="@color/dark_blue"
+                   android:text="START"/>
+               <Button
+                   android:id="@+id/btnSkip"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="right"
+                   android:textColor="@color/white"
+                   android:backgroundTint="@color/dark_blue"
+                   android:text="SKIP"/>
+
+           </LinearLayout>
+       </LinearLayout>
+   </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llTestDetail"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accelerometer"
+            android:layout_gravity="center"
+            android:textColor="@color/dark_blue"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:paddingTop="50dp"
+            android:text="Rotate your device to change between\n vertical and horizontal view"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel Test"
+            android:textColor="@color/black"
+            android:layout_gravity="center" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+
